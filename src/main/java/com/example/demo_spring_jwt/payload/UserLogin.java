@@ -1,18 +1,18 @@
 package com.example.demo_spring_jwt.payload;
 
 public class UserLogin {
-    private  String username;
-    private  String password;
+    private String userId;
+    private String password;
 
     public UserLogin() {
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getPassword() {

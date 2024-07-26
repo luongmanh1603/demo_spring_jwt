@@ -25,7 +25,7 @@ public class AuthController {
 
     @GetMapping("/token")
     public String GenerateToken(@RequestBody UserLogin userLogin) {
-        var authen = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userLogin.getUsername(), userLogin.getPassword()));
+        var authen = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userLogin.getUserId(), userLogin.getPassword()));
         return tokenService.generateToken(authen);
     }
 }
